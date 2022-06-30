@@ -1,0 +1,40 @@
+키보드 주요 특수문자 영문이름(** 주요 용어)
+
+`  Grave				**
+~  Tilde (틸더)				**
+!  Exclamation Point
+@  At Sign, Commercial Sign (엣 사인)
+#  Sharp, Crosshatch, Pound Sign
+$  Dollar Sign
+%  Percent Sign
+^  Circumflex (써컴플렉스)		**
+&  Ampersand (앰퍼샌드)			**
+*  Asterisk
+(  Left Parenthesis
+)  Right Parenthesis
+() Parentheses
+-  Hyphen, Dash, Minus Sign
+_  Underscore, Underline, Underbar
+=  Equal Sign
++  Plus Sign
+|  Vertical Bar				**(글꼴에 따라 모양이 바뀜)
+[  Left Bracket
+]  Right Bracket
+[] Brackets				**
+{  Left Brace
+}  Right Brace
+{} Brace				**
+;  Semicolon
+:  Colon
+"  Qutation Mark
+'  Apostrophe
+,  Comma
+.  Dot, Period, Full Stop
+<  Left Angle Bracket, Less Than Sigh
+>  Rgiht Angle Bracket, Greater Than Sigh
+<> Angle Brackets
+/  Slash, Virgule
+\  Back Slash, Won Sign			**(글꼴에 따라 모양이 바뀜)
+?  Question Mark
+   Space(공백)
+
