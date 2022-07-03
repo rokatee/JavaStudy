@@ -32,7 +32,7 @@ public class Test008
 		a = (int)ch1;
 		// 명시적 형 변환(강제 형 변환)
 
-		System.out.printf("%c, %c, %c, %c, %d%n", ch1, ch2, ch3, ch4, a);
+		//System.out.printf("%c, %c, %c, %c, %d%n", ch1, ch2, ch3, ch4, a);
 
 
 		// 결과 출력
