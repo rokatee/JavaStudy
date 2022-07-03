@@ -24,7 +24,7 @@ public class Test009
 
 
 		//double b = (double)0;
-		System.out.println("double b : " +b);
+		System.out.println("double b : " + b);
 		// ¡æ double b : 0.5
 
 
