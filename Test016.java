@@ -37,9 +37,9 @@ public class Test016
 												// 입력한 숫자 앞의 공간에 0을 채워 넣는다
 												// 0000000123
 
-		System.out.printf("%+d\n", 123);		// +123 %+d 혹은 +%d 하면 +가 문자로 출력 됨
+		System.out.printf("%+d\n", 123);		// +123 → %+d 혹은 +%d 하면 +가 문자로 출력 됨
 		System.out.printf("+%d\n", 123);		// +123 
-		System.out.printf("%d\n", +123);		// 123 앞에 + 를 붙여도 양수이기에 그냥 365가 출력 됨
+		System.out.printf("%d\n", +123);		// 123 → 앞에 + 를 붙여도 양수이기에 그냥 365가 출력 됨
 
 		//System.out.printf("%-d\n", 123);		// 런타임 에러
 		System.out.printf("-%d\n", 123);		// 음수는 -%d 로 해야 에러가 안 나옴
