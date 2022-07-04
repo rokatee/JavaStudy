@@ -21,21 +21,19 @@
 */
 
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
 
 public class Test015
 {
 	public static void main(String[] args) throws IOException
 	{
 		// 주요 변수 선언
-		InputStreamReader isr = new InputStreamReader(System.in);
-		BufferedReader br = new BufferedReader(isr);
-
 		char ch;			// 문자
 		int a;				// 정수 첫째 자리
-		int b;				// 정수 둘째 자리
-		int c;				// 두 자리 정수 
+
+		// 추가 변수 선언
+		//char temp;			// 임시로 추가 선언한 변수
+		//int b;				// 정수 둘째 자리
+		//int c;				// 두 자리 정수 
 					
 					// 연산 및 처리
 					//System.out.print("문자 하나 입력하세요 : ");
@@ -58,36 +56,52 @@ public class Test015
 		//문자
 		//사용자에게입력 요구
 		System.out.print("문자 하나 입력하세요 : ");		//A를 입력 후 엔터를 누름
-		//문자 도출											//A와 엔터값인 \r 이 입력 대기열에 감
+		//문자 도출											//A와 엔터값인 \r과 \n 이 입력 대기열에 감
 		ch = (char)System.in.read();						//A를 가져옴
-		System.in.read();									//※입력 대기열에 남아있는 \r과 \n을
-		System.in.read();									//  System.in.read(); 2번 입력하여 스킵해 건너뛰기
 
-		//정수 (1의 자리)
-		//사용자에게 입력 요구
-		System.out.print("1의 자리 정수 하나 입력하세요 : ");
-		//정수 도출
-		a = System.in.read() - 48;							//여기서 \r 을 가져옴, 그래서 자동으로 넘어감
-		System.in.read();									//※입력 대기열에 남아있는 \r과 \n을
-		System.in.read();									//  System.in.read(); 2번 입력하여 스킵해 건너뛰기
+		System.in.skip(2);									//※입력 대기열에 남아있는 \r과 \n을
+															//  System.in.read(); 2번 혹은
+															//  System.in.skip(2); 을
+															//  입력하여 스킵해 건너뛰기
 
-		//정수 (10의 자리)
+		//정수
 		//사용자에게 입력 요구
-		System.out.print("10의 자리 정수 하나 입력하세요 : ");
+		System.out.print("정수 하나 입력하세요 : ");
 		//정수 도출
-		b = System.in.read() - 48;							//여기서 48을 빼는 건, 숫자를 입력해도 문자로 인식함 '0'
+		//a = System.in.read() - 48;
+		a = System.in.read();
+		a -= 48;											//여기서 48을 빼는 건, 숫자를 입력해도 문자로 인식함 '0'
 															//따라서 '0'의 아스키코드 값인 48을 빼주어야
 															//입력한 숫자 그대로 출력 됨
+		//temp = (char)System.in.read();
+
+		////정수 (10의 자리)
+		////사용자에게 입력 요구
+		//System.out.print("10의 자리 정수 하나 입력하세요 : ");
+		////정수 도출
+		//b = System.in.read() - 48;
 
 		//결과 출력
-		//System.out.printf("\n>> 입력한 문자 : %s\n", ch);
-		//System.out.printf(">> 입력한 정수 : %d\n", a);
-
-		c = b*10+a;
 
 		System.out.println("\n>> 입력한 문자 : " + ch);
 		System.out.println(">> 입력한 정수 : " + a);
-		System.out.println(">> 입력한 정수 : " + b);
-		System.out.println(">> 입력한 정수 : " + c);
+		//System.out.println(">> 입력한 정수 : " + temp);
+		
+		//c = b*10+a;
+		//System.out.println(">> 입력한 정수 : " + b);		//10의 자리 정수
+		//System.out.println(">> 입력한 정수 : " + c);		//2자리 정수
+
 	}
 }
+
+
+/*
+실행 결과
+
+문자 하나 입력하세요 : A
+정수 하나 입력하세요 : 5
+
+>> 입력한 문자 : A
+>> 입력한 정수 : 5
+
+*/
