@@ -38,16 +38,56 @@
 계속하려면 아무 키나 누르세요....
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class Test039
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		char x;
+
+		System.out.print("임의의 알파벳 한 문자 입력 : ");
+		x = (char)System.in.read();
 		
+		//모음		'A' 'E' 'I' 'O' 'U'
+		//대문자	65	69	73	79	85
+		//모음		'a'	'e'	'i'	'o'	'u' 
+		//소문자	97	101	105	111	117
+		if (x == 'A' || x == 'E' || x == 'I' || x == 'O' || x == 'U' || x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u')
+		{
+			System.out.println(">> " + x + " → 모음");
+		}
+		else if (x >= 65 && x <= 90 || x >= 97 && x <= 122)
+		{
+			System.out.print("");
+		}
+		else
+		{
+			System.out.println(">> 입력 오류");
+		}
 	}
 }
 
 /*
 실행 결과
+임의의 알파벳 한 문자 입력 : F
 
+임의의 알파벳 한 문자 입력 : R
 
+임의의 알파벳 한 문자 입력 : I
+>> I → 모음
+
+임의의 알파벳 한 문자 입력 : D
+
+임의의 알파벳 한 문자 입력 : A
+>> A → 모음
+
+임의의 알파벳 한 문자 입력 : Y
+
+임의의 알파벳 한 문자 입력 : ♡
+>> 입력 오류
+계속하려면 아무 키나 누르십시오 . . .
 */

@@ -34,7 +34,7 @@ public class Test036
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		/*
+		
 		int num1, num2;
 		char op;
 
@@ -66,7 +66,7 @@ public class Test036
 		{
 			System.out.println("\n판별 불가");
 		}
-		*/
+		
 
 
 		/*

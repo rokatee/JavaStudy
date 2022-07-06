@@ -28,7 +28,7 @@ public class Test043
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		/*
+		
 		// 해답 1
 		int num1, num2;
 		int op;
@@ -54,7 +54,7 @@ public class Test043
 								// 2. 메소드 종료 → main() 메소드 종료 → 프로그램 종료
 		}
 		System.out.printf("\n>> %d %c %d = %d\n", num1, op, num2, result);
-		*/
+		
 		
 		
 		// 해답 2

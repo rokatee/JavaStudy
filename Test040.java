@@ -28,16 +28,54 @@
 계속하려면 아무 키나 누르세요...
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 public class Test040
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		char x;
 
+		System.out.print("한 문자 입력 : ");
+		x = (char)System.in.read();
+
+
+		//소문자 x >= 97 && x <= 122
+		//대문자 x >= 65 && x <= 90
+		if (x >= 65 && x <= 90)
+		{
+			System.out.println(">> " + x + " → " + (char)(x + 32));
+		}
+		else if (x >= 97 && x <= 122)
+		{
+			System.out.println(">> " + x + " → " + (char)(x - 32));
+		}
+		else
+		{
+			System.out.print(">> 입력 오류\n");
+		}
 	}
 }
 
 /*
 실행 결과
 
+한 문자 입력 : L
+>> L → l
 
+한 문자 입력 : o
+>> o → O
+
+한 문자 입력 : v
+>> v → V
+
+한 문자 입력 : E
+>> E → e
+
+한 문자 입력 : ♡
+>> 입력 오류
+계속하려면 아무 키나 누르십시오 . . .
 */
