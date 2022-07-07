@@ -45,11 +45,11 @@ public class Test040
 
 		//소문자 x >= 97 && x <= 122
 		//대문자 x >= 65 && x <= 90
-		if (x >= 65 && x <= 90)
+		if (x >= 'A' && x <= 'Z')
 		{
 			System.out.println(">> " + x + " → " + (char)(x + 32));
 		}
-		else if (x >= 97 && x <= 122)
+		else if (x >= 'a' && x <= 'z')
 		{
 			System.out.println(">> " + x + " → " + (char)(x - 32));
 		}
