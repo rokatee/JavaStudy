@@ -42,9 +42,9 @@ public class Test042
 		System.out.print("임의의 정수 입력(1~3) : ");
 		num = Integer.parseInt(br.readLine());
 		
-		//일반 모델
-		//String result;
 		/*
+		//일반 모델
+		String result;
 		switch (num)
 		{
 		case 1 : result = "★"; break;
@@ -53,22 +53,19 @@ public class Test042
 		default : result = "입력 오류"; break;
 
 		}
+		System.out.println(result);
 		*/
-		//System.out.println(result);
 
 		//기본 모델
-		//String result;
-
 		switch (num)
 		{
-		case 1 : System.out.print("★");
+		case 3 : System.out.print("★");
 		case 2 : System.out.print("★");
-		case 3 : System.out.print("★\n");
-
-		default : System.out.println("입력오류"); break;
+		case 1 : System.out.print("★\n");
+			break;
+		default : System.out.println("입력오류");
 
 		}
-
 	}
 }
 

@@ -29,8 +29,8 @@ public class Test053
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		int n;					//사용자 입력값 담을 변수
-		int result = 0;			//정수의 합을  담을 변수
-		int even = 0, odd = 0;	//홀짝의 합을  담을 변수
+		int result = 0;			//정수의 합을 담을 변수
+		int even = 0, odd = 0;	//홀짝의 합을 담을 변수
 		int a = 0;				//루프 변수
 		
 		System.out.print("임의의 정수 입력 : ");
