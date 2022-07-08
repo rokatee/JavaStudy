@@ -40,7 +40,7 @@ public class Test045
 		while (a1 <= 100)
 		{
 			even1 += a1;	
-			a1 +=2;
+			a1 += 2;
 		}
 
 		System.out.println("1 부터 100 까지의 수 중 짝수의 합 : " + even1);
