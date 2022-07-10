@@ -27,7 +27,6 @@ public class Test066
 {
 	public static void main(String[] args)
 	{
-		int a;			//사용자 입력값
 		int i;			//루프변수
 		int sum = 0;	//누적값
 		

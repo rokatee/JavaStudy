@@ -66,7 +66,7 @@ public class Test052
 		*/
 
 
-		/*
+		
 		int n1, n2;
 		int sum = 0;
 		int a;
@@ -77,49 +77,49 @@ public class Test052
 		n2 = Integer.parseInt(br.readLine());
 		
 			
-			if (n1 <= n2)
-			{
-				a = n1;
+		if (n1 <= n2)
+		{
+			a = n1;
 
-				while (a <= n2)
-				{
-					sum += a;
-					a++;
-				}
-				System.out.printf(">> %d ~ %d 까지의 합 : %d\n",n1, n2, sum);
-			}
-			else if(n2 < n1)
+			while (a <= n2)
 			{
-				a = n2;
-				while (a < n1)
-				{
-					sum += a;
-					a++;
-				}
-				System.out.printf(">> %d ~ %d 까지의 합 : %d\n",n2, n1, sum);
+				sum += a;
+				a++;
 			}
-			*/
+			System.out.printf(">> %d ~ %d 까지의 합 : %d\n",n1, n2, sum);
+		}
+		else if(n2 < n1)
+		{
+			a = n2;
+			while (a < n1)
+			{
+				sum += a;
+				a++;
+			}
+			System.out.printf(">> %d ~ %d 까지의 합 : %d\n",n2, n1, sum);
+		}
+			
 
 			
-			int min, max;		//두 수 비교해줄 변수
-			int n;				//루프변수
-			int a,b;			//사용자 입력값 변수
-			int result = 0;		//누적합 변수
+			//int min, max;		//두 수 비교해줄 변수
+			//int n;				//루프변수
+			//int a,b;			//사용자 입력값 변수
+			//int result = 0;		//누적합 변수
 
-			System.out.print("첫 번째 정수 입력 : ");
-			su1 = Integer.parseInt(br.readLine());
-			System.out.print("두 번째 정수 입력 : ");
-			su2 = Integer.parseInt(br.readLine());
+			//System.out.print("첫 번째 정수 입력 : ");
+			//su1 = Integer.parseInt(br.readLine());
+			//System.out.print("두 번째 정수 입력 : ");
+			//su2 = Integer.parseInt(br.readLine());
 
-			if (a > b)
-			{
-				min = b;
-				max = a;
-			}
-			while ()
-			{
-				
-			}
+			//if (a > b)
+			//{
+			//	min = b;
+			//	max = a;
+			//}
+			//while ()
+			//{
+			//	
+			//}
 			
 	}
 }

@@ -53,7 +53,7 @@ public class Test051
 
 			// 확인 연산
 			// n으로 num이 나누어 떨어지는지 확인
-			if (num % n == 0)	//n으로 num이 나누어 떨어지면
+			if (num % n == 0)	//num이 n으로 나누어 떨어지면
 			{
 				flag = false;	//소수가 아님
 				break;			//멈춘다(+그리고 빠져나간다)
@@ -76,9 +76,9 @@ public class Test051
 		
 		
 
-		/
-		int a = 2;	// 루프 숫자
+		
 		int n;		// 사용자로부터 입력받을 임의의 정수
+		int a = 2;	// 루프 숫자
 		String result = "소수";
 
 		System.out.print("임의의 정수 입력 : ");
@@ -94,11 +94,11 @@ public class Test051
 			if (n % a == 0)		// num가 자신보다 작은 수인 a로 나눠진다면 소수가 아님
 			{					// 왜나면 소수는 1과 자기 자신으로만 나누어지기 때문
 				result = "소수 아님";
-				a++;
 			}
+			a++;
 		}
-		System.out.printf("%d → %s", n, result);
-		*/
+		System.out.printf("%d → %s\n", n, result);
+		
 
 
 

@@ -35,9 +35,9 @@ public class Test055
 			n++;
 		}
 		while (n <= 10);
-		*/
+		
 
-		/*
+		
 		int n = 1;
 
 		do
@@ -46,9 +46,9 @@ public class Test055
 			System.out.println("n = " + n);
 		}
 		while (n <= 10);
-		*/
 		
-		/*
+		
+		
 		int n = 1;
 
 		do
@@ -57,9 +57,9 @@ public class Test055
 			System.out.println("n = " + n);
 		}
 		while (n < 10);
-		*/
+		
 
-		/*
+		
 		int n = 0;
 
 		do
@@ -96,5 +96,11 @@ public class Test055
 /*
 실행 결과
 
-
+100이상의 정수를 입력하라 : 1
+100이상의 정수를 입력하라 : 2
+100이상의 정수를 입력하라 : 3
+100이상의 정수를 입력하라 : 10
+100이상의 정수를 입력하라 : 100
+100 → 100이상의 정수 입력 완료
+계속하려면 아무 키나 누르십시오 . . .
 */
