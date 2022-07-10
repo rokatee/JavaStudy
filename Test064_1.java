@@ -98,9 +98,9 @@ public class Test064_1
 		//45678
 
 
-		for (int i = 0; i < 5; i++)			// 
+		for (int i = 0; i < 5; i++)
 		{
-			for (int j = 0; j < 1+i; j++)		// 
+			for (int j = 0; j < 1+i; j++)
 			{
 				System.out.print("*");
 			}
@@ -116,9 +116,9 @@ public class Test064_1
 		System.out.println();
 
 		
-		for (int i = 0; i < 5; i++)			// 
+		for (int i = 0; i < 5; i++)
 		{
-			for (int j = 0; j < 5-i; j++)	// 
+			for (int j = 0; j < 5-i; j++)
 			{
 				System.out.print("*");
 			}
@@ -135,13 +135,13 @@ public class Test064_1
 
 
 		
-		for (int i = 0; i < 5; i++)			// 
+		for (int i = 0; i < 5; i++)
 		{
-			for (int j = 0; j < i; j++)			// 
+			for (int j = 0; j < i; j++)
 			{
 				System.out.print(" ");
 			}
-			for (int j = 0; j < 5-i; j++)	// 
+			for (int j = 0; j < 5-i; j++)
 			{
 				System.out.print("*");
 			}

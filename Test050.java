@@ -11,6 +11,7 @@
 연산 결과 : xxxx
 계속하려면...
 */
+
 public class Test050
 {
 	public static void main(String[] args)
