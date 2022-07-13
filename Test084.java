@@ -27,9 +27,73 @@
 계속하려면...
 */
 
+import java.util.Scanner;
+
 public class Test084
 {
 	public static void main(String[] args)
 	{
+		Scanner sc = new Scanner(System.in);
+		int stuNum;								// 입력된 학생 수를 담을 변수
+
+		System.out.print("학생 수 입력 : ");
+		stuNum = sc.nextInt();
+		
+		int[] arr = new int[stuNum];			// 입력된 학생 수가 담길 배열
+
+		for (int i = 0; i < arr.length; i++)	// 배열에 담긴 학생 수만큼 점수를 입력할 반복문
+		{
+			System.out.printf("%d번 학생의 점수 입력 : ", i+1);
+			arr[i] = sc.nextInt();
+		}
+		// 테스트
+		//System.out.println(arr[0]);
+
+		int sum = 0;							// 누적합을 담을 변수
+		
+		for (int j = 0; j < arr.length; j++)	// 누적합 반복문
+		{
+			sum += arr[j];
+			// 테스트
+			//System.out.println(arr[j]);
+		}
+		System.out.printf(">> 합	: %d\n", sum);
+
+		double avg;								// 평균을 담을 변수
+		avg = (double)sum / stuNum;				// 평균 연산식
+		//avg = (double)sum / arr.length;
+		System.out.printf(">> 평균	: %.2f\n", avg);
+
+		System.out.println(">> 편차");
+
+		double[] arr1 = new double[stuNum];		// 편차를 담을 배열을 선언
+		
+		double deviation;						// 편차를 담을 변수
+		for (int k = 0; k < arr1.length; k++)	
+		{
+			//편차 = 평균 - 학생 점수	
+			arr1[k] = avg - arr[k];
+		}
+		for (int l = 0; l < arr.length; l++)	// 입력된 학생들의 평균과 편차 반복문
+		{
+			System.out.printf("평균 : %d / 편차 : %.2f\n",arr[l], arr1[l]);
+		}
 	}
 }
+
+/*
+실행 결과
+
+학생 수 입력 : 3
+1번 학생의 점수 입력 : 90
+2번 학생의 점수 입력 : 60
+3번 학생의 점수 입력 : 70
+>> 합   : 220
+>> 평균 : 73.33
+>> 편차
+평균 : 90 / 편차 : -16.67
+평균 : 60 / 편차 : 13.33
+평균 : 70 / 편차 : 3.33
+계속하려면 아무 키나 누르십시오 . . .
+
+*/
