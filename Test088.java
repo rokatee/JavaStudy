@@ -61,11 +61,5 @@ public class Test088
 			}
 			System.out.println();
 		}
-		
-
-
-		// ÇØ´ä
-		
-
 	}
 }

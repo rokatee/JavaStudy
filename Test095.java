@@ -85,7 +85,7 @@ public class Test095
 		max = arr[0];
 		mim = arr[0];
 
-		for (int i = 1; i < arr.length; i++)		//int i = 1인 이유? → 어차피 arr[0]을 max와 mim에 담을테니
+		for (int i = 0; i < arr.length; i++)		//int i = 1인 이유? → 어차피 arr[0]을 max와 mim에 담을테니
 		{											//						arr[1]부터 시작하면 된다
 			System.out.printf("%4d\n", arr[i]);
 			/*
