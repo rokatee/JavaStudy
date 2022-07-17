@@ -80,6 +80,8 @@ public class Test082
 		System.out.println("------------------------");
 		*/
 
+
+
 		// Scanner 인스턴스 생성
 		Scanner sc = new Scanner(System.in);
 

@@ -36,12 +36,14 @@ public class Test091
 {
 	public static void main(String[] args)
 	{
+		
+		// 방법 1
 		int[][] arr = new int[5][5];
 		int n = 0;
 
-		//테스트
+		// 테스트
 		//int sum = 0;
-
+		
 		for (int i = 0; i < arr.length-1; i++)			// 범위 설정을 배열만큼 안하면
 		{												// 남은 공간은 없어지는 공간이 아닌 "0" 으로 채워진다
 			for (int j = 0; j < arr[i].length-1; j++)
@@ -76,7 +78,7 @@ public class Test091
 				//		   ↓
 				//arr[4][4] += arr[i][j];*/
 			}
-			//테스트 개행
+			// 테스트 개행
 			//System.out.println();
 		}
 
@@ -90,7 +92,66 @@ public class Test091
 		}
 
 
-		//오답
+		/*
+		// 방법 2
+		int[][] arr = new int[5][5];
+
+		int n=1;
+		int sum=0;
+		int m =1;
+
+		
+		for (int i=0; i<5; i++)
+		{
+			for (int j=0; j<5; j++)
+			{
+				if (i!=4 && j!=4)
+				{
+					arr[i][j]=n;
+					sum += n;
+					arr[arr.length-1][arr.length-1] += n;
+					n++;
+
+				}
+				else
+				 arr[i][j] += sum;
+
+				 
+			}
+			sum=0;
+		}
+
+		for (int i=0; i<5; i++)
+		{
+			for (int j=0; j<5; j++)
+			{
+				if (i!=4 && j!=4)
+				{
+					//arr[j][i]=m;
+					sum += arr[j][i];
+					
+				}
+				else
+				 arr[j][i] += sum;
+				//arr[arr.length][arr.length] +=arr[j][i];
+
+				 
+			}
+			sum=0;
+		}
+
+		for (int i=0; i<arr.length; i++)
+		{
+			for (int j=0; j<arr[i].length; j++)
+			{
+				System.out.printf("%3d",arr[i][j]);
+			}
+			System.out.println();
+		}
+		*/
+
+
+		// 오답
 		/*
 		for (int i = 0; i < 4; i++)
 		{

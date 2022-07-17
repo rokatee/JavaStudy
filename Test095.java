@@ -82,12 +82,14 @@ public class Test095
 		int max;
 		int mim;
 
-		max = arr[0];
-		mim = arr[0];
+		max = mim = arr[0];
+		//mim = arr[0];
 
 		for (int i = 0; i < arr.length; i++)		//int i = 1인 이유? → 어차피 arr[0]을 max와 mim에 담을테니
 		{											//						arr[1]부터 시작하면 된다
-			System.out.printf("%4d\n", arr[i]);
+			System.out.printf("%4d", arr[i]);
+		}
+		System.out.println();
 			/*
 			발생시킬 난수의 개수 입력 : 10
 				15  50  91  70  64  91   2  16  69  29
@@ -98,6 +100,8 @@ public class Test095
 			*/
 			//------------------------------------------여기까지 수행하면 배열 구성 완료
 
+		for (int i = 1; i < arr.length; i++)		//int i = 1인 이유? → 어차피 arr[0]을 max와 mim에 담을테니
+		{											//						arr[1]부터 시작하면 된다
 			if (max < arr[i])
 			{
 				//max = max^arr[i];

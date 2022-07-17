@@ -33,7 +33,6 @@ public class Test076
 		this(100);			// this는 class Test076이고 Test076(100)은 결국 아래의 Test076(int x) 메소드를 부르는 것이다.
 		x = 10;
 
-
 		System.out.println("인자 없는 생성자");
 		System.out.println("Test076이 갖고있는 x : " + this.x);
 		System.out.println("Test076이 갖고있는 x : " + x);
@@ -49,12 +48,11 @@ public class Test076
 	{
 		//x = x;			// 둘 다 지역변수 이므로 안 됨
 		//Test076.x = x;	// 이렇게 Test076의 전역변수 x를 가져오려면 
-							// (Test076.x 와 같은 문법은 다른 곳에서 이미 쓰이기 때문)
 		this.x = x;			// this 키워드를 사용해야함 → 전역변수 = 지역변수(이면서 매개변수)
+							// (Test076.x 와 같은 문법은 다른 곳에서 이미 쓰이기 때문)
 		System.out.println("인자가 하나인 생성자");
 		System.out.println("Test076이 갖고있는 x : " + this.x);
 	}
-
 
 	public static void main(String[] args)
 	{
@@ -67,11 +65,11 @@ public class Test076
 /*
 실행 결과
 
-인자가 하나인 생성자			// line 33에 의해 54가 출력된 것	
-Test076이 갖고있는 x : 100		// line 33에 의해 55가 출력된 것
-인자 없는 생성자				// line 34에 의해 37이 출력된 것
+인자가 하나인 생성자			// line 33에 의해 53가 출력된 것	
+Test076이 갖고있는 x : 100		// line 33에 의해 54가 출력된 것
+인자 없는 생성자				// line 34에 의해 36이 출력된 것
+Test076이 갖고있는 x : 10		// line 34에 의해 37이 출력된 것
 Test076이 갖고있는 x : 10		// line 34에 의해 38이 출력된 것
-Test076이 갖고있는 x : 10		// line 34에 의해 39이 출력된 것
-인자가 하나인 생성자			// line 33에 의해 54가 출력된 것	
-Test076이 갖고있는 x : 100		// line 33에 의해 55가 출력된 것
+인자가 하나인 생성자			// line 52에 의해 54가 출력된 것	
+Test076이 갖고있는 x : 100		// line 52에 의해 55가 출력된 것
 */
