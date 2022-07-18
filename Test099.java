@@ -120,7 +120,7 @@ public class Test099
 		wd.print(j);
 
 
-		/*
+		/
 		// 변수 선언
 		int y, m, d, j;
 		int year, month, result;

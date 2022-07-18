@@ -54,14 +54,62 @@
 계속하려면....
 
 */
+import java.util.Scanner;
 
-public class Test101_1
+public class Test101_2
 {
 	public static void main(String[] args)
 	{
-		Sungjuk_1 sj = new Sungjuk_1();
-		sj.set();
-		sj.input();
-		sj.print();
+		//main클래스만 사용한 방법
+		Scanner sc = new Scanner(System.in);
+
+		int total = 0;
+		int stuNum;
+		double avg = 0;
+		String name;
+
+		int rank;
+
+		do
+		{
+			System.out.print("인원 수 입력 : ");
+			stuNum = sc.nextInt();
+		}
+		while (stuNum < 0 || stuNum > 100);
+
+		int[][] score = new int[stuNum][3];
+
+		String[] nameArr = new String[stuNum];
+
+		for(int i = 0; i < stuNum; i++)
+		{
+			//rc[i] = new Record();
+			System.out.printf("%d번째 학생 이름 입력 : ", i+1);
+			name = sc.next();
+			System.out.print("국어 점수  : ");
+			score[i][0] = sc.nextInt();
+			System.out.print("영어 점수  : ");
+			score[i][1] = sc.nextInt();
+			System.out.print("수학 점수  : ");
+			score[i][2] = sc.nextInt();
+
+			nameArr[i] = name;
+		}
+
+		int[] totArr = new int[stuNum];
+		double[] avgArr = new double[stuNum];
+
+		for(int i = 0; i < stuNum; i++)
+		{
+			total = score[i][0] + score[i][1] + score[i][2];
+			avg = total/3.0;
+
+			totArr[i] = total;
+			avgArr[i] = avg;
+		}
+
+		for(int i = 0; i < stuNum; i++)
+			System.out.printf("이름: %s | 국: %d | 영: %d | 수: %d | 총: %d | 평: %.2f%n", nameArr[i], score[i][0], 
+													score[i][1], score[i][2], totArr[i], avgArr[i]);
 	}
 }
