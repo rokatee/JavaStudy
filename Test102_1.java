@@ -62,7 +62,7 @@ class RpsGame_1
 
 		System.out.println();
 		System.out.println(" - 유저   : " + str[user-1]);
-		System.out.println(" - 컴퓨터 : " + str[com -1]);
+		System.out.println(" - 컴퓨터 : " + str[com-1]);
  	}
 	
 	// 승부에 대한 최종 결과 연산

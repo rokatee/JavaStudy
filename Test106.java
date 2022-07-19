@@ -100,9 +100,11 @@ public class Test106
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		// 입력받은 주민번호
+		// 입력받은 주민번호(문자열 형태)를 담아둘 변수 선언
 		String str;
-
+		
+		// 공식에 따라 주민번호의 각 자릿수에 곱하게 될 수 → 배열 형태로 구성
+		//			   7  5  0  6  1  5  -  1  8  6  2  1  3  3
 		int[] times = {2, 3, 4, 5, 6, 7, 0, 8, 9, 2, 3, 4, 5};
 
 		// 곱셈 연산 후 누적합
@@ -115,14 +117,17 @@ public class Test106
 		if (str.length() != 14)
 		{
 			System.out.println(">> 입력오류~!!!");
-			return;
+			return;		// 메소드 종료 → main()종료 → 프로그램 종료
 		}
+
+		// 테스트
+		//System.out.println("자릿수 적합!!");
 		
 		// 13자리 숫자 반복문 돌리며 times 배열과 주민번호 각자리 숫자 곱들의 누적합
 		for (int i = 0; i < 13; i++)
 		{
 			if (i == 6)		// 6번째 자리 '-'를 패스하기 위함
-				continue;
+				continue;	// i가 6일 때, 뒷부분 무시하고 계속하라
 
 			tot += times[i] * Integer.parseInt(str.substring(i, (i+1)));	// str.substring(m,n)은 
 																			// 실상 m부터 n-1까지 숫자를 의미하므로
@@ -131,6 +136,9 @@ public class Test106
 																			// 2,3		이면 2부터 3의 전까지 → 2
 																			// 각 자리 수마다 times 배열과 곱하기 가능~
 		}
+		
+		// 테스트
+		//System.out.println("tot : " + tot);
 
 		//=================================================== 여기까지 수행하면 ① 과 ② 끝
 		
@@ -145,9 +153,11 @@ public class Test106
 		//=================================================== 여기까지 수행하면 ③ 과 ④ 끝
 
 		// 최종 결과 출력
-		if (result == Integer.parseInt(str.substring(13)))		// str.substring(13)는 13번째 숫자부터 14번째 전까지
+		if (result == Integer.parseInt(str.substring(13)))		// str.substring(13)은 13번째 숫자
 			System.out.println(">> 정확한 주민번호~!!");		// result의 숫자가 str에 있는 13번째 숫자와 동일하면 굿
 		else
 			System.out.println(">> 잘못된 주민번호~!!");		// 아니면 ㅠㅠ...
+
+		// 750615-1862133 로 확인 해볼 것
 	}
 }

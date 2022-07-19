@@ -94,6 +94,7 @@ public class Sungjuk_1
 			// 성적(국 영 수) 반복 출력
 			for (int j = 0; j < 3; j++)
 				System.out.printf("%4d", rec[i].score[j]);
+
 			// 총점, 평균 출력
 			System.out.printf("%5d", rec[i].tot);
 			System.out.printf("%8.2f", rec[i].avg);
