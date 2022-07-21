@@ -47,7 +47,7 @@ class SubTest114 extends SuperTest114
 	public void write()
 	{
 		System.out.println("Super write() 메소드 : " + a + " : " + b + " : " + c);
-		// a 값을 받지 못해 컴파일 에러 뜬다(39번 줄의 주석 설명참고)
+		// a 값을 받지 못해 컴파일 에러 뜬다(43번 줄의 주석 설명참고)
 	}
 	*/
 
@@ -63,6 +63,7 @@ class SubTest114 extends SuperTest114
 		System.out.println("Sub print() 메소드 : " + b);
 		System.out.println("Sub print() 메소드 : " + this.b);	//SubTest114.b
 		System.out.println("Sub print() 메소드 : " + super.b);	//SuperTest114.b
+		System.out.println();
 		/*
 			Sub print() 메소드 : 100
 			Sub print() 메소드 : 100
@@ -78,6 +79,7 @@ class SubTest114 extends SuperTest114
 		System.out.println("Sub print() 메소드 : " + c);
 		System.out.println("Sub print() 메소드 : " + this.c);	//SubTest114.c
 		System.out.println("Sub print() 메소드 : " + super.c);	//SuperTest114.c
+		System.out.println();
 		// 3개 모두 20 이 출력 됨
 		// 변수 c는 접근하는데 아무런 제약과 제한이 없다
 		// 슈퍼클래스에서 선언된 c
@@ -112,8 +114,7 @@ public class Test114
 		// → 변수는 다른 공간에 저장되어 독립적으로 사용이 가능하다
 
 		ob.write();
-		// →	Super write() 메소드 : 5 : 10 : 20
-		//		Sub write() 메소드 : 100 : 20
+		// →	Sub write() 메소드 : 100 : 20
 
 		System.out.println("-------------------------------------구분선");
 		System.out.println(ob.b);
@@ -131,8 +132,5 @@ public class Test114
 		// 메소드와 변수를 꼭!! 구분할 것
 		// 메소드는 부모클래스를 자식클래스가 덮는다
 		// 변수는 부모클래스와 자식클래스 따로따로 저장된다
-
-
-
 	}
 }

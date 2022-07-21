@@ -54,6 +54,7 @@ public class Test116
 		// → SuperTest116 ob2 = (SuperTest116)ob1; 과 동일한 코드
 		
 		
+		
 		/*
 		학생 소연이 = new 학생();
 
