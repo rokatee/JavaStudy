@@ -46,7 +46,7 @@ interface Demo
 	
 	// 인터페이스의 멤버 변수는 static final 을 별도로 명시하지 않아도 
 	// 자동으로 static final 인 상태로 된다
-	public int a = 10;
+	public int a = 10;	// → 사실상   public int A = 10;  인 상태
 
 	// 인터페이스의 메소드는 선언만 가능(정의 불가)
 	// 인터페이스는 abstract 을 별도로 명시하지 않아도 
