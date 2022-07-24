@@ -53,8 +53,8 @@ public class Test128
 		
 		System.out.println("ob2 : " + ob2);
 		System.out.println("ob2.toString : " + ob2.toString());
-		// → ob1		   : Test@6d06d69c
-		// → ob1.toString : Test@6d06d69c
+		// → ob2		   : Test@6d06d69c
+		// → ob2.toString : Test@6d06d69c
 		
 		// 클래스명@해시코드
 		

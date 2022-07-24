@@ -8,7 +8,7 @@ public class Test104
 	public static void main(String[] args)
 	{
 		print(3.14);
-		double result = print(3.14);
+		//double result = print(3.14);
 		// 자바 입장에선 10번이나 11번이나 똑같다
 		// 왜? = 기준으로 오른쪽부터 읽기때문
 		// 11번은 30번을 부르는게 아님

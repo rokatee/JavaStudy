@@ -31,7 +31,7 @@
 import java.util.Scanner;
 
 class WeekDay_1
-{   
+{
 	// 주요 변수 선언 → 속성
 	private int y, m, d;		// 사용자가 입력한 연, 월, 일을 담아낼 변수
 

@@ -34,8 +34,8 @@
 			static Integer valueOf(int i)
 			int 형을 Integer 형으로 변환한다
 
-			byte byteValue(), int intValue(),
-			short shortValue(), long longValue(),
+			byte byteValue(), short shortValue(),
+			int intValue(), long longValue(),
 			float floatValue(), double doubleValue()
 			해당 기본 자료형으로 형 변환한 값을 반환한다
 

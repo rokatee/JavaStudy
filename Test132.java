@@ -19,8 +19,8 @@ public class Test132
 		//System.out.println(b1);
 
 		// °¡´É
-		//long c1 = 123456789123456789L;
-		//System.out.println(c1);
+		long c1 = 123456789123456789L;
+		System.out.println(c1);
 		
 		// ºÒ°¡´É
 		//long d1 = 123456789123456789123456789L;
@@ -56,10 +56,6 @@ public class Test132
 		BigInteger g = new BigInteger("2");
 		System.out.println("2ÀÇ 3½Â : " + g.pow(3));
 		// ¡æ 2ÀÇ 3½Â : 8
-
-
-		
-
 	}	
 }
 

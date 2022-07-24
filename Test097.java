@@ -6,6 +6,7 @@
 //Test096.java 파일과 비교
 
 // ※ 배열 변수의 복사에는 데이터 복사, 주소값 복사 두 가지 형태가 존재한다
+
 //	  주소값 복사 → 얕은 복사
 //	  원본을 수정하면 복사본에 영향을 미치게 되는 복사 방법
 //	  (자바의 배열 뿐 아니라 모든 참조형 데이터에 해당하는 복사 방법)
@@ -44,24 +45,28 @@ public class Test097
 			System.out.printf("%6d", nums[i]);
 		}
 		System.out.println();
+		// → 10 20000    30    40    50
 
 		for (int i = 0; i < copys1.length; i++)
 		{
 			System.out.printf("%6d", copys1[i]);
 		}
 		System.out.println();
+		// → 10 20000    30    40    50
 
 		for (int i = 0; i < copys2.length; i++)
 		{
 			System.out.printf("%6d", copys2[i]);
 		}
 		System.out.println();
+		// → 10    20    30    40    50
 
 		for (int i = 0; i < copys3.length; i++)
 		{
 			System.out.printf("%6d", copys3[i]);
 		}
 		System.out.println();
+		// → 10    20    30    40    50
 
 
 
@@ -88,11 +93,6 @@ public class Test097
 
 		// 복사한 배열(result) 반환
 		return result;
-
-
-
-
-
 	}
 }
 

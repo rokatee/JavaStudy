@@ -11,7 +11,7 @@ public class Test134
 		byte b = 3;
 		int i = 256;
 		long l = 1233455756568L;
-		//String m = "뿅";			// string도 받는 건 없음 ㅠㅠ
+		//String m = "뿅";			// String까지 받는 건 없음 ㅠㅠ
 		short s = 123;
 		double d = 123.124;
 		float f = 123.456f;

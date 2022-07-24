@@ -30,6 +30,5 @@ public class Test133
 		// BigInteger °´Ã¼·Î º¯È¯
 		System.out.println(a.toBigInteger());
 		// ¡æ 123456789
-
 	}
 }

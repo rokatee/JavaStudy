@@ -77,27 +77,27 @@ public class Test051
 		
 
 		
-		int n;		// 사용자로부터 입력받을 임의의 정수
-		int a = 2;	// 루프 숫자
+		int a;		// 사용자로부터 입력받을 임의의 정수
+		int n = 2;	// 루프 숫자
 		String result = "소수";
 
 		System.out.print("임의의 정수 입력 : ");
-		n = Integer.parseInt(br.readLine());
+		a = Integer.parseInt(br.readLine());
 
 		//연산 및 처리
-		if (n == 1)
+		if (a == 1)
 		{
 				result = "소수 아님";
 		}
-		while (a < n)
+		while (n < a)
 		{
-			if (n % a == 0)		// num가 자신보다 작은 수인 a로 나눠진다면 소수가 아님
+			if (a % n == 0)		// num가 자신보다 작은 수인 a로 나눠진다면 소수가 아님
 			{					// 왜나면 소수는 1과 자기 자신으로만 나누어지기 때문
 				result = "소수 아님";
 			}
-			a++;
+			n++;
 		}
-		System.out.printf("%d → %s\n", n, result);
+		System.out.printf("%d → %s\n", a, result);
 		
 
 
