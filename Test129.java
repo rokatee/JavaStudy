@@ -33,7 +33,7 @@ public class Test129
 		//    1-2 : false	// equals()도 "==" 비교 연산자와 동일하게 주소값을 비교하는 메소드다
 
 		NewCar nCar3 = nCar1;	// 객체 복사 → 얕은 복사(참조형)
-								// → 주소값 복사
+								// → 주소값 복사 (Test096,097.java 참고)
 		System.out.println("2-1 : " + nCar1.equals(nCar3));
 		System.out.println("2-2 : " + (nCar1 == nCar3));
 		// → 2-1 : true
