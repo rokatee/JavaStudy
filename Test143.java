@@ -57,8 +57,8 @@ public class Test143
 {
 	public static void main(String[] args)
 	{
-		Calendar ob = new GregorianCalendar();
 		Scanner sc = new Scanner(System.in);
+		Calendar ob = new GregorianCalendar();
 		int y,m;			//-- 사용자로부터 입력받은 년, 월을 담을 변수
 
 		do
