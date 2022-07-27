@@ -40,7 +40,7 @@ public class Test152
 
 		try
 		{
-			a = getData(-2);	// ③ 예외 발생(24번 줄에서 던져진)
+			a = getData(-2);	// ③ 예외 발생(②에서 던져진)
 		}
 		catch (Exception e)		// ④ 예외 잡아내기
 		{
