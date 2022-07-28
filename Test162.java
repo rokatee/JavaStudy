@@ -106,7 +106,40 @@ public class Test162
 		v.add(new MyData("박명수", 7));
 		v.add(new MyData("정준하", 3));
 
+		// 벡터 자료구조 v에 담긴 내용(요소) 전체 출력하기
+		// 실행 예)
+		// 이름: 유재석, 나이:13세
+		// 이름: 박명수, 나이:7세
+		// 이름: 정준하, 나이:3세
 		
-
-	}	
+		/*
+		// 방법 1
+		for (MyData m : v)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n",m.getName(),m.getAge());
+		}
+		*/
+		/*
+		// 방법 2
+		for (int i = 0; i < v.size(); i++)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n",v.elementAt(i).getName(),v.elementAt(i).getAge());
+		}
+		*/
+		/*
+		// 방법 3
+		for (int i = 0; i < v.size(); i++)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n",v.get(i).getName(),v.get(i).getAge());
+		}
+		*/
+		
+		// 방법 4
+		for (Object temp : v)
+		{
+			System.out.printf("이름:%s, 나이:%d세\n",((MyData)temp).getName(), ((MyData)temp).getAge());
+		}
+		
+		
+	}
 }
