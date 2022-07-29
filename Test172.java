@@ -89,10 +89,10 @@ public class Test172
 		System.out.println("문자열 입력(종료:Ctrl+z)");
 
 		// read() : InputStream 클래스의 대표적 메소드(→ 바이트 스트림)
-		while ((data = System.in.read()) != -1)  //null 이 아니라면 System.in.read때문에  IOException
+		while ((data = System.in.read()) != -1)  //null 이 아니라면 System.in.read때문에 IOException
 		{
 			ch = (char)data;
-			//System.out.print(ch);
+			//System.out.print(ch);			//(→ 문자 스트림)
 			/*
 			문자열 입력(종료:Ctrl+z)
 			abcd
