@@ -23,10 +23,8 @@ public class Test081
 		// 秦翠 规过
 		char[] arr3 = new char[26];
 		for (int i = 0, ch = 65; i < arr3.length; i++, ch++)
-			arr3[i] = (char)ch;
-
-		for (int i = 0; i < arr3.length; i++)
 		{
+			arr3[i] = (char)ch;
 			System.out.print(arr3[i] + " ");
 		}
 		System.out.println();
@@ -41,6 +39,7 @@ public class Test081
 		}
 		System.out.println();
 
+
 		// 规过2
 		char[] arr1 = {'A', 'B', 'C', 'D', 'E', 'F', 'G'
 						, 'H', 'I', 'J', 'K', 'L', 'M'
@@ -54,6 +53,7 @@ public class Test081
 			System.out.print(arr1[i] + " ");
 		}
 		System.out.println();
+
 
 		// 规过3
 		char[] arr2 = new char[26];

@@ -35,7 +35,8 @@ public class Test058
 			}
 			n++;
 		}
-		System.out.println();
+
+		System.out.println();	// °³Çà
 		System.out.println("======================================");
 		
 

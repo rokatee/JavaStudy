@@ -41,7 +41,7 @@ class WeekDay
 	int yoil, ilsoo;
 
 	// 배열 선언 및 초기화
-	char[] result = {'일','월', '화', '수', '목', '금', '토'};
+	char[] result = {'일', '월', '화', '수', '목', '금', '토'};
 
 	// 사용자 값
 	void input()

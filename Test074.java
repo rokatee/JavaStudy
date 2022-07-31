@@ -36,7 +36,7 @@ class NumberTest
 		// 텅 비어있음
 	//}
 
-	
+
 	// 사용자 정의 생성자
 	NumberTest()
 	{
