@@ -95,7 +95,6 @@ class WeekDay
 		yoil = ilsoo % 7;
 
 		return yoil;
-
 	}
 	
 	// 결과 출력 메소드
