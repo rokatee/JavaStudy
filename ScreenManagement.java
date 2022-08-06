@@ -206,10 +206,19 @@ public class ScreenManagement extends AdminCall
 	{
 		//BackAMenu bAM = new BackAMenu();
 
+		// updateScreen_M()에서 선택한 영화가 담겨있는 vt의 인덱스값 구하기
+		for (int n=0; n<vt.size(); n++)
+		{
+			boolean flag = ( vt.get(n).getTitle() ).equals(tempTitle);
+
+			if (flag)
+				tempIndex = n;
+		}
+		
 		System.out.println("\n[상영할 영화 등록] ==============================\n");
 		System.out.println();
 		
-		System.out.printf("선택한 영화는 %s입니다.\n", tempTitle);
+		System.out.printf("선택한 영화는 %s(%d분)입니다.\n", tempTitle, vt.get(tempIndex).getPlayTime() );
 		
 		System.out.println();
 
@@ -236,11 +245,13 @@ public class ScreenManagement extends AdminCall
 		System.out.println("99. 관리자 메뉴로 돌아가기");
 		System.out.println("==============================================");
 
-		System.out.println();
-
-		System.out.println("이미 사용 중인 상영관을 선택할 시 상영 영화가 변경됩니다.");
-		System.out.print("상영관 선택 : ");
-		sel = Integer.parseInt(br.readLine());
+		do
+		{
+			System.out.println("\n이미 사용 중인 상영관을 선택할 시 상영 영화가 변경됩니다.");
+			System.out.print("상영관 선택 : ");
+			sel = Integer.parseInt(br.readLine());
+		}
+		while (sel<0 || sel>3 && sel!=99);
 
 		switch (sel)
 		{
@@ -250,15 +261,6 @@ public class ScreenManagement extends AdminCall
 			case 99 :
 				AmenuDisp();
 				break;
-		}
-		
-		// 선택한 영화가 담겨있는 vt의 인덱스값 구하기
-		for (int n=0; n<vt.size(); n++)
-		{
-			boolean flag = ( vt.get(n).getTitle() ).equals(tempTitle);
-
-			if (flag)
-				tempIndex = n;
 		}
 
 		if (sTime[sel-1] >= vt.get(tempIndex).getPlayTime())
@@ -427,7 +429,7 @@ public class ScreenManagement extends AdminCall
 		//int i = 0;
 		//BackAMenu bAM = new BackAMenu();
 
-		System.out.println("\n[상영 중인 영화 내역] =========");
+		System.out.println("\n[상영 중인 영화 내역] =========\n");
 
 		//for (Object temp : vt)
 		//{
@@ -440,7 +442,7 @@ public class ScreenManagement extends AdminCall
 
 		for (int i=0; i<screen.length; i++)
 		{
-			System.out.printf("\n%d관\n", i+1);
+			System.out.printf("%d관\n", i+1);
 
 			try
 			{

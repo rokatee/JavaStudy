@@ -4,15 +4,15 @@ import java.io.IOException;
 public class MovieManagement_1 extends AdminCall
 {    
 	// 변수 클래스로 이동
-	//Scanner sc = new Scanner(System.in);
-	//// 영화목록
-	//MovieData[] movies = new MovieData[100];
-	//// 프로그램 실행 flag
-	//boolean isRun = true;
-	//// 메인 메뉴 선택 번호
-	//int selectNo = 0;
-	//// 영화관리 번호
-	//int count=1;
+	Scanner sc = new Scanner(System.in);
+	// 영화목록
+	MovieData[] movies = new MovieData[100];
+	// 프로그램 실행 flag
+	boolean isRun = true;
+	// 메인 메뉴 선택 번호
+	int selectNo = 0;
+	// 영화관리 번호
+	int count=1;
 
 	public void movieManage() throws IOException
 	{
@@ -313,8 +313,9 @@ public class MovieManagement_1 extends AdminCall
 		return sc.next();
 	}
 
-	//public static void main(String[] args)
-	//{
-	//	new MovieManagement();
-	//}
+	public static void main(String[] args) throws IOException
+	{
+		new MovieManagement();
+		AmenuDisp();
+	}
 }

@@ -6,7 +6,7 @@ class UserData
 	// 주요 속성 구성 → 주요 변수 선언(멤버 변수)
 	private String rvNumber;		//-- 예매번호
 	private String title;			//-- 영화제목
-	private int time;				//-- 영화 시간
+	private String time;				//-- 영화 시간
 	private int screen;				//-- 상영관
 	private String seatNumber;		//-- 좌석번호
 	private int inwon;
@@ -31,12 +31,12 @@ class UserData
 		this.title = title;
 	}
 
-	public int getTime()
+	public String getTime()
 	{
 		return time;
 	}
 
-	public void setTitle(int time)
+	public void setTime(String time)
 	{
 		this.time = time;
 	}
@@ -72,7 +72,7 @@ class UserData
 	}
 	
 	// 생성자(매개변수 5개인 생성자) 예매번호, 제목, 시간, 상영관, 좌석→ 사용자 정의 생성자
-	public UserData(String rvNumber, String title, int time, int screen, int inwon, String seatNumber)
+	public UserData(String rvNumber, String title, String time, int screen, int inwon, String seatNumber)
 	{
 		this.rvNumber = rvNumber;
 		this.title = title;
@@ -89,7 +89,7 @@ class UserData
 		//this("", 0);
 		//reservNumber = "";
 		title = "";
-		time = 0;
+		time = "";
 		screen = 0;
 		seatNumber = "";
 	}

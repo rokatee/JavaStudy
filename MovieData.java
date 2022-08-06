@@ -11,14 +11,21 @@ class NameData
 {
 	// 주요 속성 구성
 	public static String tempTitle;
+	public static int tempGrade;
+	public static int tempPlayTime;
 	public static int tempIndex = -1;
 
 	public static Integer sel;
 	public static BufferedReader br;
+	public static Scanner sc;
 
 	public static Vector<MovieData> vt;
 	//private static Vector<MovieData> screen;
+
 	static MovieData[] screen = new MovieData[3];	// 각관에서 상영할 영화를 담을 배열
+	
+	static MovieData[] movies = new MovieData[1];	// 등록할 영화 제목, 관람 등급, 러닝타임을 담을 배열
+
 	//static int[] sTime = new int[3];				// 각 관의 스크린 타임 (관리자 지정)
 	static int[] sTime = {120, 180, 240};			// 각 관의 스크린 타임 (고정: 2, 3, 4시간)
 
@@ -32,26 +39,16 @@ class NameData
 	{
 		// Vector 자료 구조 생성
 		vt = new Vector<MovieData>();
-		//screen = new Vector<MovieData>();
 
 		// BufferedReader 인스턴스 생성
 		br = new BufferedReader(new InputStreamReader(System.in));
 
+		// Scanner 인스턴스 생성
+		sc = new Scanner(System.in);
+
 		// 사용자 입력값 초기화
 		sel = 0;
 	}
-	//--------------------------------------------------------------------연수
-
-	Scanner sc = new Scanner(System.in);
-	// 영화목록
-	MovieData[] movies = new MovieData[100];
-	// 프로그램 실행 flag
-	boolean isRun = true;
-	// 메인 메뉴 선택 번호
-	int selectNo = 0;
-	// 영화관리 번호
-	int count=1;
-	//---------------------------------------------------------------------인교
 }
 
 public class MovieData
@@ -112,7 +109,6 @@ public class MovieData
 
 	public String toString()
 	{
-		//return "Movie{ [num : "+this.num+"] [title : " +this.title +"] [grade : " + this.grade + "]  [playTime : " + this.playTime + "] }";
 		return "영화 제목    : " +this.title +"\n관람 등급    : " + this.grade + "\n러닝타임(분) : " + this.playTime;
 	}
 }
