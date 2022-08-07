@@ -7,7 +7,7 @@ class AdminMenu
 	public static final int B_FIRST  = 0;	// 초기 메뉴로 돌아가기
 }
 
-public class AdminCall extends NameData
+public class AdminCall extends MainCall
 {
 
 	// 관리자 메뉴 출력 메소드
@@ -17,7 +17,7 @@ public class AdminCall extends NameData
 		System.out.println("1. 상영 영화 관리");
 		System.out.println("2. 상영관 관리");
 		System.out.println();
-		System.out.println("0. 이전 메뉴로 돌아가기");
+		System.out.println("0. 처음으로 돌아가기");
 		System.out.println("===============================");
 	
 		do
@@ -38,14 +38,13 @@ public class AdminCall extends NameData
 	{
 		ScreenManagement sm = new ScreenManagement();
 		MovieManagement mm = new MovieManagement();
-		//FirstCall fc = new FirstCall();
-		User fc = new User();	// User클래스 나누기 전까진 이렇게
+		MainCall mc = new MainCall();
 
 		switch (sel)
 		{
 			case AdminMenu.M_MANAGE : mm.movieManage(); break;
 			case AdminMenu.S_MANAGE : sm.screenManage(); break;
-			case AdminMenu.B_FIRST	: fc.firstMenu(); break;
+			case AdminMenu.B_FIRST	: mc.firstMenu(); break;
 			default : System.out.println(">> 잘못된 메뉴 선택입니다."); break;
 		}
 

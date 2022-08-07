@@ -1,115 +1,44 @@
+import java.util.Scanner;
+import java.util.Random;
 import java.util.Vector;
-import java.util.Iterator;
+import java.util.Arrays;
 
 class UserData
 {
-	// 주요 속성 구성 → 주요 변수 선언(멤버 변수)
-	private String rvNumber;		//-- 예매번호
-	private String title;			//-- 영화제목
-	private String time;				//-- 영화 시간
-	private int screen;				//-- 상영관
-	private String seatNumber;		//-- 좌석번호
-	private int inwon;
+	protected Integer sel;		//-- 사용자 선택 값(정수형)
+	protected String p_id;		//-- 특정 동작을 수행하기 위한 process id 변수 선언
 
-	public String getRvNumber()	// 예매번호
+	// 상영관에서 상영할 영화의 정보를 담는 배열
+	static MovieData[] screen = new MovieData[3];
+
+	public void setScreen(MovieData[] m)
 	{
-		return rvNumber;
+		screen = m;
 	}
 
-	public void setRvNumber(String rvNumber)
-	{
-		this.rvNumber = rvNumber;
-	}
+	// 예매하기 기능에서 예매번호 부여받는 화면에서 필요한 변수 선언
+	//protected int num;			//-- 임시저장 변수, timePick() 에서 사용할 변수, 사용자가 선택한 시간대 값
+	protected String tempTitle;		//-- 영화 검색 시, 사용자가 입력한 영화 제목 값
+	protected int tempScreen;		//-- 사용자가 선택한 영화의 상영관 값
+	protected int tempRound;		//-- 사용자가 선택한 영화의 회차 값
+	protected int runTime;			//-- 영화별 러닝타임
+	protected Vector<String> reservedNum = new Vector<String>();	//-- 예매번호 생성 시(난수 발생 시) 사용할 벡터
+	protected Vector<reservedData> ud = new Vector<reservedData>();	//-- 사용자 예매하기 완료 화면에서 입력한 값들(예매정보) 을 저장하는 벡터
 
-	public String getTitle()	// 영화 제목 값 가져다 쓸때
-	{
-		return title;
-	}
+	//====================================================================================================================================
+	protected String tempTime;		//-- 사용자가 선택한 시간 값
+	//====================================================================================================================================
 
-	public void setTitle(String title)	// 영화 제목 값 세팅할때/저장할때
-	{
-		this.title = title;
-	}
-
-	public String getTime()
-	{
-		return time;
-	}
-
-	public void setTime(String time)
-	{
-		this.time = time;
-	}
-
-	public int getScreen()
-	{
-		return screen;
-	}
-
-	public void setScreen(int screen)
-	{
-		this.screen = screen;
-	}
-
-	public int getInwon()
-	{
-		return inwon;
-	}
-
-	public void setInwon(int inwon)
-	{
-		this.inwon = inwon;
-	}
-
-	public String getSeatNumber()
-	{
-		return seatNumber;
-	}
-
-	public void setSeatNumber(String seatNumber)
-	{
-		this.seatNumber = seatNumber;		
-	}
+	// 좌석 선택 화면에서 사용하는 변수
+	protected String tempSeat;		//-- 사용자가 선택한 자리
+	protected int adult;			//-- 성인
+	protected int teenager;			//-- 청소년
+	protected int kid;				//-- 어린이
+	protected int total;			//-- 총 인원 (선택한 성인 + 청소년 + 어린이 값)
+	protected boolean[][][] seatInfos = new boolean[15][5][5];	//-- 영화 회차당 좌석정보 [총 영화 상영 회차][행][열]
 	
-	// 생성자(매개변수 5개인 생성자) 예매번호, 제목, 시간, 상영관, 좌석→ 사용자 정의 생성자
-	public UserData(String rvNumber, String title, String time, int screen, int inwon, String seatNumber)
-	{
-		this.rvNumber = rvNumber;
-		this.title = title;
-		this.time = time;
-		this.screen = screen;
-		this.inwon = inwon;
-		this.seatNumber = seatNumber;
+	//====================================================================================================================================
+	protected String adminPassword = "java002$";	//-- 초기화면(A,12) 의 관리자 비밀번호
 
-	}
-
-	// 생성자(매개변수 없는 생성자) → 사용자 정의 생성자
-	public UserData()
-	{
-		//this("", 0);
-		//reservNumber = "";
-		title = "";
-		time = "";
-		screen = 0;
-		seatNumber = "";
-	}
-	
-	
-	public String toString()
-	{
-		//return "Movie{ [num : "+this.num+"] [title : " +this.title +"] [grade : " + this.grade + "]  [playTime : " + this.playTime + "] }";
-		return "영화제목: " + this.title + "영화시간" + this.time + "상영관" + this.screen + "좌석 : " + this.seatNumber;
-	}
-	
+	protected String bookNumber;	//-- 예매취소 메뉴에서 사용자가 입력한 값(예매번호) 저장할 변수
 }
-
-/*
-
-public class Userdata
-{
-	public static void main(String[] args)
-	{
-		
-	}
-}
-*/

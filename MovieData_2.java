@@ -10,6 +10,7 @@ public class MovieData_2
     private String title;
     private int grade;
     private int playTime;
+    private String genre;
     private boolean bAvailable;
     private ArrayList<MovieData_2> movieList = new ArrayList<MovieData_2>();
  
@@ -57,6 +58,16 @@ public class MovieData_2
 		this.playTime = playTime;
 	}
  
+	public String getGenre()
+	{
+		return genre;
+	}
+
+	public void setGenre(String genre)
+	{
+		this.genre = genre;
+	}
+ 
     public boolean isbAvailable() 
 	{
         return bAvailable;
@@ -100,7 +111,7 @@ public class MovieData_2
 		} // end while
 	}
 
-	public void insertMovie() throws InterruptedException, IOException
+	public void insertMovie() throws InterruptedException
 	{
         while (true) 
 		{
@@ -131,28 +142,25 @@ public class MovieData_2
 
             System.out.println("영화 제목 입력");
             m.setTitle(sc.nextLine());
-            System.out.println("관람등급 입력");
+            System.out.println("관람 등급 입력");
             m.setGrade(sc.nextInt());
-            System.out.println("러닝타임 입력");
+            System.out.println("러닝 타임 입력");
             m.setPlayTime(sc.nextInt());
-			// 여기서 숫자를 입력해 아래 y/n 부분에서 스킵이 됨
-			//System.in.read();
-			//System.in.read();
-
-
+            System.out.println("영화 장르 입력");
+            m.setGenre(sc.nextLine());
             m.setbAvailable(true);
-            //Thread.sleep(1000);
+            Thread.sleep(1000);
  
             // 컨펌 후에 리스트에 객체 저장
-            System.out.println("영화번호 : " + m.getmNo());
-            System.out.println("영화제목 : " + m.getTitle());
+            System.out.println("영화 번호  : " + m.getmNo());
+            System.out.println("영화 제목  : " + m.getTitle());
             System.out.println("관람 등급  : " + m.getGrade());
-            System.out.println("러닝타임  : " + m.getPlayTime());
-            System.out.println("예매가능 : " + m.isbAvailable());
+            System.out.println("러닝 타임  : " + m.getPlayTime());
+            System.out.println("영화 장르  : " + m.getGenre());
+            System.out.println("예매가능   : " + m.isbAvailable());
  
             System.out.println("입력하신 사항이 모두 맞습니까? 예(Y) 아니오(N)");
             String confirm = sc.nextLine();
-			System.in.skip(2);
             
 			if (confirm.equalsIgnoreCase("y")) 
 			{
@@ -184,11 +192,12 @@ public class MovieData_2
             for (int i = 0; i < movieList.size(); i++) 
 			{
                 System.out.println("===============================");
-                System.out.println("영화 번호 : " + movieList.get(i).getmNo());
-                System.out.println("영화 제목 : " + movieList.get(i).getTitle());
+                System.out.println("영화 번호  : " + movieList.get(i).getmNo());
+                System.out.println("영화 제목  : " + movieList.get(i).getTitle());
                 System.out.println("관람 등급  : " + movieList.get(i).getGrade());
                 System.out.println("러닝 타임  : " + movieList.get(i).getPlayTime());
-                System.out.println("대여가능 : " + movieList.get(i).isbAvailable());
+                System.out.println("영화 장르  : " + movieList.get(i).getGenre());
+                System.out.println("대여 가능  : " + movieList.get(i).isbAvailable());
                 System.out.println("===============================\n");
  
             } // end for

@@ -72,35 +72,7 @@ public class MovieManagement extends AdminCall
 			else if ( ( vt.get(i).getTitle() ).equals(tempTitle) )
 			{
 				System.out.println("이미 등록된 영화입니다. 다시 입력하세요.");
-				System.out.println();
-				System.out.println(" 0. 이전 메뉴로 돌아가기");
-				System.out.println(" 1. 영화 정보 다시 입력하기");
-				System.out.println("99. 관리자 메뉴로 돌아가기");
-				System.out.println("=======================================");
-
-				do
-				{
-					System.out.print("\n메뉴 선택 : ");
-					sel = Integer.parseInt(br.readLine());
-				}
-				while (sel != 0 && sel != 1 && sel != 99);
-				
-				System.out.println();
-
-				switch(sel) 
-				{
-					case 0 : 
-						movieManage(); 
-						break;
-					case 1 : 
-						registerMovie(); 
-						break;
-					case 99 : 
-						AmenuDisp();
-						break;
-					default : 
-						System.out.println("등록된 메뉴가 아닙니다.");
-				}
+				registerMovie();
 				break;
 			}
 			else
@@ -153,7 +125,7 @@ public class MovieManagement extends AdminCall
 			System.out.print("\n메뉴 선택 : ");
 			sel = Integer.parseInt(br.readLine());
 		}
-		while (sel != 0 && sel != 1 && sel != 99);
+		while (sel != 0 && sel != 99);
 		
 		System.out.println();
 
@@ -193,7 +165,7 @@ public class MovieManagement extends AdminCall
 			sel = Integer.parseInt(br.readLine());
 		}
 		while (sel != 0 && sel != 99);
-
+		
 		System.out.println();
 
 		switch(sel) 
@@ -249,38 +221,8 @@ public class MovieManagement extends AdminCall
 		// 인덱스 값을 못 찾았으면
 		if (tempIndex == -1)
 		{
+				System.out.println("해당 영화가 존재하지 않습니다. 영화 제목을 다시 입력하세요.\n");
 				System.out.println();
-				System.out.println("해당 영화가 존재하지 않습니다.");
-				System.out.println("영화 제목을 다시 입력하세요.");
-				System.out.println();
-				System.out.println(" 0. 이전 메뉴로 돌아가기");
-				System.out.println(" 1. 영화 제목 다시 입력하기");
-				System.out.println("99. 관리자 메뉴로 돌아가기");
-				System.out.println("=======================================");
-				
-				do
-				{
-					System.out.print("\n메뉴 선택 : ");
-					sel = Integer.parseInt(br.readLine());
-				}
-				while (sel != 0 && sel != 1 && sel != 99);
-				
-				System.out.println();
-
-				switch(sel) 
-				{
-					case 0 : 
-						movieManage(); 
-						break;
-					case 1 : 
-						deleteMovie(); 
-						break;
-					case 99 : 
-						AmenuDisp();
-						break;
-					default : 
-						System.out.println("등록된 메뉴가 아닙니다.");
-				}
 		}
 		// 찾았으면
 		else
@@ -295,27 +237,27 @@ public class MovieManagement extends AdminCall
 		}
 
 		// screen[] 내에 tempTitle과 같은 영화 제목이 어디 있는 찾아 삭제하는 구문
-		try
-		{
-			for (int n=0; n<screen.length; n++)
+			try
 			{
-				if ( tempTitle.equals( screen[n].title ) )
+				for (int n=0; n<screen.length; n++)
 				{
-					screen[n] = null;
-					System.out.println(" 0. 이전 메뉴로 돌아가기");
-					System.out.println("99. 관리자 메뉴로 돌아가기");
-					System.out.println("========================================\n");
+					if ( tempTitle.equals( screen[n].title ) )
+					{
+						screen[n] = null;
+						System.out.println(" 0. 이전 메뉴로 돌아가기");
+						System.out.println("99. 관리자 메뉴로 돌아가기");
+						System.out.println("========================================\n");
 
-					break;
+						break;
+					}
 				}
 			}
-		}
-		catch (NullPointerException e)
-		{
-			System.out.println(" 0. 이전 메뉴로 돌아가기");
-			System.out.println("99. 관리자 메뉴로 돌아가기");
-			System.out.println("========================================\n");
-		}
+			catch (NullPointerException e)
+			{
+				System.out.println(" 0. 이전 메뉴로 돌아가기");
+				System.out.println("99. 관리자 메뉴로 돌아가기");
+				System.out.println("========================================\n");
+			}
 
 		do
 		{
@@ -369,11 +311,12 @@ public class MovieManagement extends AdminCall
 				return movies[i];
 			}
 		}
+
 		return null;
 	}
 
 	// 제목 선택 받기
-	String getSelectData(String message) throws IOException
+	String getSelectData(String message) 
 	{
 		System.out.print(message);
 		return br.readLine();

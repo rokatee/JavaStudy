@@ -11,9 +11,8 @@ public class testMain extends AdminCall
 		screen[1] = new MovieData("탑건2", 15, 70);
 		screen[2] = new MovieData("미니언즈2", 0, 60);
 
-
-		User u =  new User();
-		u.setScreen(screen);// 영화정보 입력해주는거
-		u.startProcess();//유저 시작
+		User u = new User();
+		u.setScreen(screen);	// 영화정보 입력해주는거
+		u.startProcess();		//유저 시작
 	}
 }
