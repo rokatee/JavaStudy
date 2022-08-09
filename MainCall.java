@@ -22,17 +22,19 @@ public class MainCall extends NameData
 	{
 		UserCall userCall = new UserCall();
 
-		System.out.println("[영화 티켓 발권기] ==================");
+		System.out.println();
+		System.out.println("[영화 티켓 발권기] ===========================");
 		System.out.println();
 		System.out.println("예매하려면 A 를 눌러주세요.");
 		System.out.println();
 		System.out.println("관리자 비밀번호를 입력해주세요");
 		System.out.println();
-		System.out.println("=====================================");
+		System.out.println("==============================================\n");
 		
+		System .out.print("==> ");
 		String pw = sc.next();
 
-		System.out.println();
+		
 
 		// 관리자 비밀번호와 입력한 비밀번호가 같을 경우
 		if (adminPassword.equals(pw))
@@ -63,12 +65,13 @@ public class MainCall extends NameData
 	// 등록된 영화가 없을 시, 출력 구문 (B,1)
 	public void noMovie() throws IOException
 	{
-		System.out.println("[영화 티켓 발권기] ==========================");
+		System.out.println();
+		System.out.println("[영화 티켓 발권기] ===========================");
 		System.out.println();
 		System.out.println("상영 중인 영화가 없습니다.");
 		System.out.println("잠시만 기다려주시면 금방 영업 준비하겠습니다.");
 		System.out.println();
-		System.out.println("=============================================");	
+		System.out.println("==============================================");	
 		
 		firstMenu();
 	} //end noMovie method

@@ -12,13 +12,13 @@ public class AdminCall extends MainCall
 
 	// 관리자 메뉴 출력 메소드
 	public static void AmenuDisp() throws IOException
-	{
-		System.out.println("\n[관리자 모드]==================\n");
+	{					    
+		System.out.println("\n[관리자 모드]=================================\n");
 		System.out.println("1. 상영 영화 관리");
 		System.out.println("2. 상영관 관리");
 		System.out.println();
 		System.out.println("0. 처음으로 돌아가기");
-		System.out.println("===============================");
+		System.out.println("==============================================");	
 	
 		do
 		{
@@ -27,7 +27,7 @@ public class AdminCall extends MainCall
 		}
 		while (sel<0 || sel>2);
 		
-		System.out.println();
+		//System.out.println();
 
 		AmenuRun();
 
@@ -45,9 +45,9 @@ public class AdminCall extends MainCall
 			case AdminMenu.M_MANAGE : mm.movieManage(); break;
 			case AdminMenu.S_MANAGE : sm.screenManage(); break;
 			case AdminMenu.B_FIRST	: mc.firstMenu(); break;
-			default : System.out.println(">> 잘못된 메뉴 선택입니다."); break;
+			default : System.out.println("\n>> 잘못된 메뉴 선택입니다."); break;
 		}
 
-		System.out.println();
+		//System.out.println();
 	}
 }
