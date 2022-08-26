@@ -12,8 +12,8 @@ public class Test016
 		System.out.print("BBB");
 		System.out.print("CCC\n");				// \n 개행
 
-		System.out.println();					// 내용 없으면 공백 출력(개행)
-		//System.out.print();					// 내용 없으면 컴파일 에러 발생
+		System.out.println();					// println 내용 없으면 공백 출력(개행)
+		//System.out.print();					// print   내용 없으면 컴파일 에러 발생
 		
 		System.out.print("\n");					// 공백 출력하려면 개행문자 입력
 		//System.out.print(\n);					// 문자열이 아닌 개행문자 입력하면 컴파일 에러 발생
@@ -24,7 +24,7 @@ public class Test016
 
 		System.out.printf("%d + %d = %d%n", 10, 20, 30);
 		
-		System.out.printf("%5d\n", 123);		// %5d = 숫자를 포함해 10만큼의 공간을 확보하고
+		System.out.printf("%5d\n", 123);		// %5d = 숫자를 포함해 5만큼의 공간을 확보하고
 		System.out.printf("%10d\n", 123);		// %10d = 숫자를 포함해 10만큼의 공간을 확보하고
 		
 		/*										// 우측 정렬하여 숫자가 출력 됨
@@ -62,10 +62,6 @@ public class Test016
 		System.out.printf("%8.2f\n", 123.456);	// 8개 자리 확보 후 소수점 버리지는 3번째는 제외하고 숫자 넣는다
 												// → --123.46
 		System.out.printf("%2.2f\n", 123.456);	// → 123.46
-
-	
-	
-	
 	}
 }
 

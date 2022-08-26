@@ -18,7 +18,7 @@ public class Test010
 {
 	public static void main(String[] args)
 	{
-		//내가 풀이한 코드 내용
+		// 내가 풀이한 코드 내용
 		int r = 10;				// 반지름(r)
 		double pi = 3.14;		// 원주율(π)
 		
@@ -33,13 +33,12 @@ public class Test010
 
 
 
-		//다른 사람이 풀이한 코드 내용
+		// 다른 사람이 풀이한 코드 내용
 		System.out.println("넓이 : " + 10 * 10 * 3.14);		// 짧다고 좋은 코드는 아님
 		System.out.println("둘레 : " + 10 * 2 * 3.14);
 
 
-		//해답 코드 내용
-
+		// 해답 코드 내용
 		// 주요 변수 선언
 		int r2 = 10;						// 반지름
 
@@ -75,8 +74,6 @@ public class Test010
 
 	}
 }
-
-
 /*
 풀이 과정을 한글로 작성하고
 그 후 코드로 변환해라

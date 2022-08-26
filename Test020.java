@@ -24,8 +24,8 @@ public class Test020
 
 
 		//결과 출력
-			System.out.println("float  a : " + (a/100000));
-			System.out.println("double b : " + (b/100000));
+		System.out.println("float  a : " + (a/100000));
+		System.out.println("double b : " + (b/100000));
 		
 		
 
